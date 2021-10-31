@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Add</servlet-name>
+        <servlet-class>telusko_html_jsp.Add</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VisitCount</servlet-name>
+        <servlet-class>telusko_html_jsp.VisitCount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>telusko_html_jsp.FirstServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SecondServlet</servlet-name>
+        <servlet-class>telusko_html_jsp.SecondServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Myservlet</servlet-name>
+        <servlet-class>telusko_html_jsp.Myservlet</servlet-class>
+<!-- Esta configuracion solo funcionara wn este servlet -->
+        <init-param>
+           <param-name>name</param-name>
+           <param-value>sockiee</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Add</servlet-name>
+        <url-pattern>/Add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisitCount</servlet-name>
+        <url-pattern>/VisitCount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/FirstServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecondServlet</servlet-name>
+        <url-pattern>/SecondServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Myservlet</servlet-name>
+        <url-pattern>/Myservlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+<!-- Estos paametros son generales-->
+    <context-param>
+       <param-name>name</param-name>
+       <param-value>Navin</param-value>
+    </context-param>
+    <context-param>
+       <param-name>Phone</param-name>
+       <param-value>Samsung</param-value>
+    </context-param>
+</web-app>
